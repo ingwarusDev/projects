@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingwarus – Projekty</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Calibri, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .contact {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: #1e1e1e;
+      border-left: 5px solid #4fc3f7;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+    }
+
+    .project:nth-child(2) {
+      border-left-color: #81c784;
+    }
+
+    .project:nth-child(3) {
+      border-left-color: #ba68c8;
+    }
+
+    .project:nth-child(4) {
+      border-left-color: #fdd835;
+    }
+
+    .project h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .project p {
+      margin: 0.5rem 0 1rem;
+    }
+
+    .project a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ingwarus</h1>
+    <p>Cześć. To moja minimalistyczna wizytówka online. Poniżej znajdziesz projekty, które rozwijam lub testuję.</p>
+    <div class="contact">
+      Kontakt: <a href="mailto:twojemail@example.com">twojemail@example.com</a>
+    </div>
+  </header>
+
+  <section class="projects">
+    <div class="project">
+      <h2>Skill Tree App</h2>
+      <p>Aplikacja do śledzenia postępów w nauce trików, oparta o drzewko umiejętności. Możliwość zgłaszania postępów i opcjonalna weryfikacja społecznościowa.</p>
+      <p>
+        <a href="#">Formularz zgłoszeniowy</a> |
+        <a href="#">Repozytorium</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Rope Dart Visualizer</h2>
+      <p>Prototyp narzędzia do wizualizacji i planowania przejść rope darta w formie grafu. Eksperyment z CSV i mapowaniem zależności.</p>
+      <p>
+        <a href="#">Demo</a> |
+        <a href="#">Repozytorium</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Multi-Video Player</h2>
+      <p>Odtwarzacz wielu filmów z kontrolkami i edytowalnym UI, stworzony z myślą o analizie trików i kombosów. Eksperyment z gestami do zmiany prędkości.</p>
+      <p>
+        <a href="#">Repozytorium</a>
+      </p>
+    </div>
+
+    <div class="project">
+      <img src="https://via.placeholder.com/400x200.png?text=Projekt+Demo" alt="Zrzut ekranu projektu">
+      <h2>Experimental Tool</h2>
+      <p>Eksperymentalne narzędzie do szybkiego prototypowania pomysłów. Sprawdza się przy testowaniu hipotez UX/UI.</p>
+      <p>
+        <a href="#">Repozytorium</a>
+      </p>
+    </div>
+  </section>
+</body>
+</html>
