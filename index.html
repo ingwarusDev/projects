@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ingwarus – Projekty</title>
   <style>
     body {
-      margin: 0;
-      padding: 2rem;
+      padding: 2rem 0 0 2.5vw;
       background-color: #121212;
       color: #e0e0e0;
       font-family: Calibri, sans-serif;
       line-height: 1.6;
+      max-width: 40rem;
     }
 
     header {
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
     }
 
     h1 {
+      color: #ffffff;
       font-size: 2rem;
-      margin: 0 0 0.5rem;
+      margin: 0 0 0 0;
     }
 
     .contact {
-      font-size: 1rem;
-      color: #ccc;
+      color: #b0bec5;
     }
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
@@ -38,19 +37,16 @@
       background-color: #1e1e1e;
       border-left: 5px solid #4fc3f7;
       border-radius: 8px;
-      padding: 1rem 1.5rem;
+      padding: 0.5rem 1rem 1rem 1.5rem;
     }
+	
 
-    .project:nth-child(2) {
+    .project:nth-child(3n+2) {
       border-left-color: #81c784;
     }
 
-    .project:nth-child(3) {
+    .project:nth-child(3n) {
       border-left-color: #ba68c8;
-    }
-
-    .project:nth-child(4) {
-      border-left-color: #fdd835;
     }
 
     .project h2 {
@@ -62,6 +58,10 @@
       margin: 0.5rem 0 1rem;
     }
 
+    .project p:last-child {
+      margin: 0.5rem 0 0;
+    }
+	
     .project a {
       color: #4fc3f7;
       text-decoration: none;
@@ -76,51 +76,102 @@
       border-radius: 4px;
       margin-bottom: 1rem;
     }
+
+.changelog {
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.95rem;
+}
+
+.changelog summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.introduction {
+  display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.introduction div {
+padding: 1rem 0 0 1rem;
+}
+
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Ingwarus</h1>
-    <p>Cześć. To moja minimalistyczna wizytówka online. Poniżej znajdziesz projekty, które rozwijam lub testuję.</p>
-    <div class="contact">
-      Kontakt: <a href="mailto:twojemail@example.com">twojemail@example.com</a>
-    </div>
+    <h1>Projekty Igora</h1>
+	
+	<div class="introduction">
+	
+      <div>Cześć.<br>Poniżej znajduje się lista rozwijanych przeze mnie pomysłów i projektów. Można znaleźć tam aktualne informacje o postępie prac i istotne linki.</div>
+	  
+	  
+      <div class="contact">
+        Jeżeli masz jakieś uwagi lub pytania do któregoś projektu, skontaktuj się ze mną osobiście lub napisz na:<br>
+        e-mail: <b>ingwarus.dev@gmail.com</b><br>discord: <b>ingwarus.dev</b>
+      </div>
+	  
+	</div>
+	 
   </header>
 
   <section class="projects">
     <div class="project">
-      <h2>Skill Tree App</h2>
-      <p>Aplikacja do śledzenia postępów w nauce trików, oparta o drzewko umiejętności. Możliwość zgłaszania postępów i opcjonalna weryfikacja społecznościowa.</p>
-      <p>
-        <a href="#">Formularz zgłoszeniowy</a> |
-        <a href="#">Repozytorium</a>
-      </p>
+      <h2>Flow Roots</h2>
+      <p>Aplikacja na androida do nauki tricków kuglarskich. Oparta jest na drzewku umiejętności i posiada dedykowany odtwarzacz filmików.</p>
+      <details class="changelog">
+        <summary>Ostatnie zmiany</summary>
+<div>&#x2611; odtwarzanie poklatkowe </div>
+<div> &#x2611; blokowanie ekranu w trakcie odtwarzania</div>
+<div> &#x2610; skalowanie elementów drzewa umiejętności</div>
+<div> &#x2610; zapętlanie fragmentów filmików</div>
+<div> &#x2610; możliwość udostępnienia lokalizacji innym trenującym z aplikacją</div>
+<div> &#x2610; uruchomienie testów</div>
+      </details>
+      <p><a href="https://forms.gle/pENBmsiTtjNShhFZ6">Formularz zgłoszeniowy</a></p>
+    </div>
+
+	
+    <div class="project">
+      <h2>Projektowanie sprzętów kuglarskich</h2>
+      <p>Pracuję nad tworzeniem unikalnych i estetycznych sprzętów kuglarskich z wykorzystaniem druku 3D, a także super tanich zastępników sprzętów treningowych.</p>
+      <details class="changelog">
+        <summary>najnowsze </summary>
+		<div>- rope dart z drukarki 3D: kunai inspirowany Naruto (prototyp)</div>
+<div>- tani kij treningowy (rurka PCV + piłki tenisowe)</div>
+<div>- tani rope dart (lina bawełniana + piłki tenisowe)</div>
+      </details>
     </div>
 
     <div class="project">
-      <h2>Rope Dart Visualizer</h2>
-      <p>Prototyp narzędzia do wizualizacji i planowania przejść rope darta w formie grafu. Eksperyment z CSV i mapowaniem zależności.</p>
-      <p>
-        <a href="#">Demo</a> |
-        <a href="#">Repozytorium</a>
-      </p>
+      <h2>Druki 3D – zamówienia i pomysły</h2>
+      <p>Zbieram zarówno konkretne zamówienia jak i ogólne pomysły na druki 3D wykonywane we współpracy z kujav.prints. Zobacz dotychczasowe wydruki na <a href="https://www.instagram.com/kujav.prints/">instagramie</a>.</p>
+      <p><a href="https://forms.gle/z1D11odnD86BKpBk7">Formularz zamówienia</a></p>
     </div>
 
     <div class="project">
-      <h2>Multi-Video Player</h2>
-      <p>Odtwarzacz wielu filmów z kontrolkami i edytowalnym UI, stworzony z myślą o analizie trików i kombosów. Eksperyment z gestami do zmiany prędkości.</p>
-      <p>
-        <a href="#">Repozytorium</a>
-      </p>
+      <h2>Stage Timer</h2>
+      <p>Aplikacja na androida pozwalająca odliczać czas do zmiany w trakcie występów.</p>
+      <div class="changelog">prace wstrzymane, ale dla zainteresowanych mogę udostępnić stabilną wersję.</div>
     </div>
+	
+    <div class="project">
+      <h2>Beat The Beat</h2>
+      <p>Aplikacja na androida do biegania i ćwiczeń w rytm muzyki</p>
+      <div class="changelog">prace wstrzymane</div>
+    </div>
+	
 
     <div class="project">
-      <img src="https://via.placeholder.com/400x200.png?text=Projekt+Demo" alt="Zrzut ekranu projektu">
-      <h2>Experimental Tool</h2>
-      <p>Eksperymentalne narzędzie do szybkiego prototypowania pomysłów. Sprawdza się przy testowaniu hipotez UX/UI.</p>
-      <p>
-        <a href="#">Repozytorium</a>
-      </p>
+      <h2>Statki</h2>
+      <p>Gra planszowa z niejawnym planowaniem ruchów o kilka w przód w klimacie statków pirackich</p>
+      <div class="changelog">po pierwszych testach prace wstrzymane</div>
     </div>
   </section>
 </body>
